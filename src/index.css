@@ -11,10 +11,25 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(45deg,#383e56,#f69e7b,#eedad1);
+  background: linear-gradient(to right, #fbd3e9, #bb377d);
+  /* background: linear-gradient(45deg,#383e56,#f69e7b,#eedad1); */
+  animation:color 15s ease infinite;
+  background-size:300% 300%;
   width: 100vw;
   height: 100vh;
   font-family: "Inconsolata", sans-serif;
+}
+
+@keyframes color{
+  0%{
+    background-position:0% 50%;
+  }
+  50%{
+     background-position: 100% 50%;
+  }
+  100%{
+     background-position:0% 50%;
+  }
 }
 
 .App {
@@ -34,8 +49,8 @@ body {
 .btn {
   font-family: "Inconsolata";
   font-size: 1.2em;
-  color: white;
-  background: #61667a;
+  color: rgb(77, 77, 77);
+  background: #e0e0e0;
   width: 5.6rem;
   height: 2.3rem;
   margin: 7px;
@@ -45,5 +60,10 @@ body {
 
 .dev {
   margin-top: 6rem;
+  color: white;
+}
+
+.dev a {
+  text-decoration: none;
   color: white;
 }
